@@ -4,3 +4,4 @@ JavaScript.
 
 # resources
 1. [introduction](resources/index.md#introduction)
+2. [binding rules](resources/binding-rules.md#binding rules)
