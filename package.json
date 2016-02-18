@@ -1,0 +1,33 @@
+{
+  "name": "explain-this-js",
+  "version": "0.0.1",
+  "description": "Crowdynews workshop explaining how the `this` keyword works in JavaScript.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danillouz/explain-this-js.git"
+  },
+  "keywords": [
+    "javascript",
+    "this",
+    "workshop",
+    "crowdynews"
+  ],
+  "author": "Daniel Illouz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danillouz/explain-this-js/issues"
+  },
+  "homepage": "https://github.com/danillouz/explain-this-js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --require babel-core/register",
+	"tdd": "npm test -- --watch"
+  }
+}
