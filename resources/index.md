@@ -3,16 +3,16 @@
 > The `this` keyword is a **reference** to that execution context.
 
 When we reason about `this`, it's important to keep in mind that there
-is a difference between **lexical scope** and **dynamic scope**.
-The engine determines lexical scope at the **compilation stage**, while
-dynamic scope is determined at the **execution stage**. These stages
-are sometimes also referred to *author time (lexical)* versus
-*run time (execution)*.
+is a difference between **lexical** and **dynamic** binding.
+A comparison can be made to how the engine determines lexical scope at
+the *compilation stage*, while dynamic scope is determined at the
+*execution stage*. These stages are sometimes also referred to
+*author time (lexical)* versus *run time (dynamic)*.
 
-Knowledge of the latter mechanism is required to understand how the
-`this` keyword works in JavaScript, because the execution context
-of a function is determined by **how** said function is called, i.e
-the **call site**.
+Knowledge of the dynamic mechanism is required to understand how the
+`this` keyword works in JavaScript, because the execution context of
+a function is determined by **how** said function is called, i.e the
+**call site**.
 
 ---
-* [resources](../README.md#resources)
+* [resources](../README.md#overview)
