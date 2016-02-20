@@ -14,5 +14,9 @@ Knowledge of the dynamic mechanism is required to understand how the
 a function is determined by **how** said function is called, i.e the
 **call site**.
 
+After the call site has been determined, we need to figure which
+one of the [binding rules](binding-rules.md#2-binding-rules) is
+applicable.
+
 ---
 * [resources](../README.md#overview)

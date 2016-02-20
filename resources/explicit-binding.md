@@ -1,13 +1,19 @@
 # 2.2. Explicit binding
-> Was the function called with `call` or `apply`? If so use the
-> object that was passed as context.
+> Was the function called with `call` or `apply`? If so, use the
+> object that was passed as **context**.
 
 The `call` and `apply` methods allow you to **invoke** a function
-without using parenthesis `()`.
+without using parentheses `()`.
 
-These methods both accept a **context object** as the first argument.
-When an object is passed, it will be bound to the `this` keyword when
-the function is executed.
+These methods both accept a **context object** as the first
+argument.
+When an object is passed, it will be bound to the `this` keyword
+when the function is executed.
+
+## gotchas
+- If a function is called in **non strict mode** and `null`
+or `undefined` is passed as the context object, the execution
+context will be bound to the **global object**.
 
 ## example 1
 ```javascript
@@ -34,5 +40,5 @@ foo.apply({ bar: 2 }); // 2
 * [apply](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
 ---
-* [binding rules](binding-rules.md#2. Binding rules)
+* [binding rules](binding-rules.md#2-binding-rules)
 * [overview](../README.md#overview)
