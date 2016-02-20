@@ -36,10 +36,10 @@ var bar = 99;
 var foo = {
 	bar: 1,
 	baz() {
-		var self = this;
+		var context = this;
 
 		function printBar() {
-			console.log(self.bar);
+			console.log(context.bar);
 		}
 
 		printBar();
