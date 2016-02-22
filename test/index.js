@@ -1,1 +1,1 @@
-import './implicit';
+require('./implicit');
