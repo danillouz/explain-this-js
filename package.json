@@ -24,7 +24,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test/index.js",
 	"tdd": "npm test -- --watch"
   }
 }

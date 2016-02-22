@@ -2,7 +2,7 @@ var chai = require('chai');
 var expect = chai.expect;
 
 describe('new binding', function () {
-	it('constructor instance property `bar` equals 10', function () {
+	it('use `this` to make the constructor instance property `bar` equal the value `10`', function () {
 		function Foo(n) {
 			// TODO: use the `this` binding to make the test pass
 		}
@@ -12,7 +12,7 @@ describe('new binding', function () {
 		expect(foo.bar).to.equal(10);
 	});
 
-	it('hard binding a constructor', function () {
+	it('determine the value of `foo.baz`', function () {
 		function Foo() {
 			this.baz = this.bar || 1;
 		}

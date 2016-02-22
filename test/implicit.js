@@ -2,7 +2,7 @@ var chai = require('chai');
 var expect = chai.expect;
 
 describe('implicit binding', function () {
-	it('`foo.baz` method returns `foo.bar` property', function () {
+	it('use `this` to make the `foo.baz` method return the `foo.bar` property', function () {
 		var foo = {
 			bar: 1,
 			baz() {
@@ -15,7 +15,7 @@ describe('implicit binding', function () {
 		expect(bar).to.equal(foo.bar);
 	});
 
-	it('`foo.baz` method returns global `bar` value', function () {
+	it('use `this` to make the `foo.baz` method return the global `bar` value', function () {
 		global.bar = 2;
 
 		var foo = {
