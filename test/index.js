@@ -1,1 +1,2 @@
+require('./new');
 require('./implicit');
