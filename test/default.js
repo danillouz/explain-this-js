@@ -9,7 +9,7 @@ describe('default binding', function () {
 			return this.foo;
 		}
 
-		expect(bar()).to.equal(/* TODO */);
+		expect( bar() ).to.equal(/* TODO */);
 	});
 
 	it('determine the value of `this.bar`', function () {

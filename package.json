@@ -25,6 +25,6 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha test/index.js",
-	"tdd": "npm test -- --watch"
+	"exercises": "npm test -- --watch"
   }
 }

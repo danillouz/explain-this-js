@@ -7,7 +7,7 @@ describe('explicit binding', function () {
 			return this.bar + this.baz;
 		}
 
-		expect(/* TODO: use `call` to invoke foo and make the test pass */).to.equal(2)
+		expect(/* TODO: use `call` to invoke `foo` and make the test pass */).to.equal(2)
 	});
 
 	it('use `apply` to make the `foo` function return the value `100`', function () {
@@ -17,6 +17,6 @@ describe('explicit binding', function () {
 			return this.bar + n;
 		}
 
-		expect(/* TODO: use `apply` to invoke foo and make the test pass */).to.equal(100);
+		expect(/* TODO: use `apply` to invoke `foo` and make the test pass */).to.equal(100);
 	});
 });
