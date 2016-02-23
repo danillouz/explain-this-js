@@ -33,12 +33,67 @@ you don't have to run `npm test` every time you want to see if
 you have solved an exercise correctly. If you want to quit, simply
 type `CTRL + C`.
 
+## running a test suite or case individually
+Inside the `test` directory the following files are considered
+a test suite:
+* `new.js`
+* `explicit.js`
+* `implicit.js`
+* `default.js`
+* `arrow-functions.js`
+
+If you look at the code, a test suite is wrapped in a `describe` block, and it contains `it` blocks, which are test cases:
+
+```javascript
+// Test suite.
+describe('arrow function', function () {
+
+	// Test case.
+	it('nested functions', function () {
+		// ...
+	});
+
+	// ...
+});
+```
+
+If you'd like to run a test suite individually, you can use the
+`only` method:
+
+```javascript
+// Now only the `arrow function` test suite will run (including it's own test cases).
+describe.only('arrow function', function () {
+	it('nested functions', function () {
+		// ...
+	});
+
+	// ...
+});
+```
+
+Same applies for a test case:
+
+```javascript
+describe('arrow function', function () {
+
+	// Now only the `nested functions` test case will run
+	it.only('nested functions', function () {
+		// ...
+	});
+
+	// ...
+});
+```
+
 ## solutions
 If you really, really get stuck (you won't!), you can always check
 `test/solutions.md`.
 
-The best way to view the solutions is [here](https://github.com/danillouz/explain-this-js/blob/master/test/solutions.md), it'll be easier to 
+The best way to view the solutions is [here](https://github.com/danillouz/explain-this-js/blob/master/test/solutions.md), it'll be easier to
 spot the changes.
+
+# requirements
+You need to run node `v4.2` or above.
 
 # reading material
 1. [Introduction](resources/index.md#1-introduction)

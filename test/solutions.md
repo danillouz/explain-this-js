@@ -121,3 +121,52 @@ var foo = {
 
 foo.baz();
 ```
+
+# arrow functions
+**determine the value of `this.bar` in nested functions**
+
+```diff
+global.bar = 8;
+
+function foo() {
+	return () => () => () => () => this.bar;
+}
+
+- expect( foo()()()()() ).to.equal(/* TODO */);
++ expect( foo()()()()() ).to.equal(8);
+```
+
+**determine the value of `this.bar` in a hard bound function**
+
+```diff
+global.bar = 8;
+
+function foo() {
+	return () => () => () => () => this.bar;
+}
+
+var fooBound = foo.call({ bar: 200 });
+
+- expect( fooBound()()()() ).to.equal(/* TODO */);
++ expect( fooBound()()()() ).to.equal(200);
+```
+
+**determine the value of `this.bar` in a function nested in a method**
+
+```diff
+global.bar = 33;
+
+var foo = {
+	bar: 5,
+	baz() {
+		var fooBaz = () => {
+			return this.bar;
+		}
+
+-		expect( fooBaz() ).to.equal(/* TODO */);
++		expect( fooBaz() ).to.equal(5);
+	}
+};
+
+foo.baz();
+```

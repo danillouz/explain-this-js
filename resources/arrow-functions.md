@@ -25,6 +25,39 @@ var bar = 99;
 foo.call({ bar: 1})()(); // 1
 ```
 
+Note that `() => () => ..` is the equivalent of nesting higher
+order functions:
+
+```javascript
+function foo() {
+	return () => () => 1;
+}
+```
+
+Is the same as:
+
+```javascript
+function foo() {
+	return () => {
+		return () => {
+			return 1;
+		};
+	};
+}
+```
+
+Which is the same as:
+
+```javascript
+function foo() {
+	return function () {
+		return function () {
+			return 1;
+		};
+	};
+}
+```
+
 ## example 2
 ```javascript
 function foo() {
