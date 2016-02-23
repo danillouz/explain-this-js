@@ -170,3 +170,20 @@ var foo = {
 
 foo.baz();
 ```
+
+**determine the value of `arguments`**
+
+```diff
+function foo() {
+	return () => {
+		var args = [ ...arguments ];
+
+-		expect(args).to.deep.equal(/* TODO */);
++		expect(args).to.deep.equal([ 1, 2, 3 ]);
+	};
+}
+
+var bar = foo(1, 2, 3);
+
+bar(4, 5, 6);
+```

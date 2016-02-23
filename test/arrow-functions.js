@@ -40,4 +40,18 @@ describe('arrow functions', function () {
 
 		foo.baz();
 	});
+
+	it('determine the value of `arguments`', function () {
+		function foo() {
+			return () => {
+				var args = [ ...arguments ];
+
+				expect(args).to.deep.equal(/* TODO */);
+			};
+		}
+
+		var bar = foo(1, 2, 3);
+
+		bar(4, 5, 6);
+	});
 });
