@@ -44,7 +44,7 @@ describe('arrow functions', function () {
 	it('determine the value of `arguments`', function () {
 		function foo() {
 			return () => {
-				var args = [ ...arguments ];
+				var args = Array.prototype.slice.call(arguments);
 
 				expect(args).to.deep.equal(/* TODO */);
 			};
