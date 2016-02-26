@@ -100,3 +100,8 @@ You need to run node `v4.2` or above.
 2. [Binding rules](resources/binding-rules.md#2-binding-rules)
 3. [Hard binding](resources/hard-binding.md#3-hard-binding)
 4. [Arrow functions](resources/arrow-functions.md#4-arrow-functions)
+
+## additional resources
+- [You don't know js: this & object prototypes](https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes)
+- [MDN: this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [Getify blog: arrow this](http://blog.getify.com/arrow-this/)
